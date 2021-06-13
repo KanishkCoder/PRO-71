@@ -1,6 +1,8 @@
 import React from 'react';
-import { Alert, Image, StyleSheet, Text, TextInput, ToastAndroid, Touchable, TouchableOpacity, Viewa } from 'react-native';
+import { Alert, Image, StyleSheet, Text, TextInput, ToastAndroid, Touchable, TouchableOpacity, View } from 'react-native';
 import * as Permissions from 'expo-permissions'
+import db from '../confige'
+
 
 export default class WriteStoryScreen extends React.Component{
 constructor(props){
@@ -44,7 +46,7 @@ submitStory=()=>{
                         <TextInput 
                         style={styles.inputBox}
                         placeholder="Write your story here"/>
-                        <TouchableOpacity>
+                        <TouchableOpacity
                             style={styles.submitButton}
                             onPress={this.submitStory}>
                             <Text style={styles.submitButtonText} >Submit</Text>
